@@ -172,11 +172,16 @@ module RailsSemanticLogger
           :action_controller
         )
 
-        debugger
         RailsSemanticLogger.swap_subscriber(
             NilClass,
             RailsSemanticLogger::Grape::LogSubscriber,
             :grape
+        )
+
+        RailsSemanticLogger.swap_subscriber(
+            NilClass,
+            RailsSemanticLogger::Twirp::LogSubscriber,
+            :twirp
         )
       end
 
