@@ -5,10 +5,12 @@ module RailsSemanticLogger
 
       # Log as debug to hide Processing messages in production
       def start_processing(event)
+        debugger
         controller_logger(event).debug { "Processing ##{event.payload[:action]}" }
       end
 
       def process_action(event)
+        debugger
         controller_logger(event).info do
           payload = event.payload.dup
 

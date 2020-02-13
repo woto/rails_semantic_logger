@@ -22,6 +22,7 @@ module RailsSemanticLogger
       end
 
       def sql(event)
+        # debugger
         self.class.runtime += event.duration
         return unless logger.debug?
 

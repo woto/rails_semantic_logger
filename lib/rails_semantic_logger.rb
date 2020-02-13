@@ -12,6 +12,9 @@ module RailsSemanticLogger
   module ActiveRecord
     autoload :LogSubscriber, 'rails_semantic_logger/active_record/log_subscriber'
   end
+  module Grape
+    autoload :LogSubscriber, 'rails_semantic_logger/grape/log_subscriber'
+  end
   module Rack
     autoload :Logger, 'rails_semantic_logger/rack/logger'
   end
